@@ -24,6 +24,10 @@ class Settings(BaseSettings):
     retrieval_recall_k: int = 50
     rerank_top_n: int = 6
     rrf_k: int = 60
+    # Rama léxica: descarta términos presentes en más de esta fracción de chunks
+    # (filtro IDF) y pondera su aporte en la fusión. Calibrados con evals/.
+    lexical_max_df: float = 0.15
+    lexical_weight: float = 1.0
 
 
 @lru_cache

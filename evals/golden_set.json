@@ -1,0 +1,345 @@
+{
+  "corpus": "Código del Trabajo de Chile, versión BCN 2026-07-23 (733 artículos vigentes, 822 chunks)",
+  "annotation_criterion": "Un artículo es relevante si contiene la regla que responde directamente la pregunta (no basta con que trate el mismo tema). Cada anotación se verificó leyendo el texto del artículo en data/processed/articulos.json. `ground_truth` es la respuesta de referencia redactada a partir de esos artículos, para RAGAS.",
+  "question_style": "Lenguaje coloquial de una persona sin formación jurídica: 'me echaron', 'vacaciones', 'licencia de maternidad' — no los términos del Código ('despido', 'feriado', 'descanso de maternidad'). Es la brecha de vocabulario que la búsqueda debe resolver.",
+  "k": 5,
+  "queries": [
+    {
+      "id": "Q01",
+      "topic": "feriado",
+      "query": "¿Cuántos días de vacaciones me corresponden al año?",
+      "relevant_article_ids": [
+        "art-67"
+      ],
+      "ground_truth": "Con más de un año de servicio se tiene derecho a 15 días hábiles de feriado anual con remuneración íntegra (20 días hábiles en Magallanes, Aysén y la provincia de Palena). Art. 67."
+    },
+    {
+      "id": "Q02",
+      "topic": "feriado",
+      "query": "Llevo 13 años trabajando, ¿me dan más días de vacaciones por antigüedad?",
+      "relevant_article_ids": [
+        "art-68"
+      ],
+      "ground_truth": "Sí: con diez años de trabajo, para uno o más empleadores, se suma un día adicional de feriado por cada tres nuevos años trabajados (feriado progresivo). Art. 68."
+    },
+    {
+      "id": "Q03",
+      "topic": "feriado",
+      "query": "¿Puedo dividir mis vacaciones en varias partes o juntar las de dos años?",
+      "relevant_article_ids": [
+        "art-70"
+      ],
+      "ground_truth": "El feriado debe ser continuo, pero el exceso sobre diez días hábiles puede fraccionarse de común acuerdo; también puede acumularse por acuerdo, hasta por dos períodos consecutivos. Art. 70."
+    },
+    {
+      "id": "Q04",
+      "topic": "feriado",
+      "query": "¿Mi jefe me puede pagar las vacaciones en plata en vez de dármelas?",
+      "relevant_article_ids": [
+        "art-73"
+      ],
+      "ground_truth": "No: el feriado no puede compensarse en dinero. Solo si el trabajador deja de pertenecer a la empresa teniendo derecho a feriado, el empleador debe compensárselo. Art. 73."
+    },
+    {
+      "id": "Q05",
+      "topic": "jornada",
+      "query": "¿Cuántas horas a la semana es lo máximo que me pueden hacer trabajar?",
+      "relevant_article_ids": [
+        "art-22"
+      ],
+      "ground_truth": "La jornada ordinaria no puede exceder de cuarenta horas semanales, distribuidas por semana o en promedios de hasta cuatro semanas. Art. 22."
+    },
+    {
+      "id": "Q06",
+      "topic": "jornada",
+      "query": "¿Cuántas horas extra puedo hacer al día y cuánto me las tienen que pagar?",
+      "relevant_article_ids": [
+        "art-31",
+        "art-32"
+      ],
+      "ground_truth": "Se pueden pactar hasta dos horas extraordinarias por día (art. 31) y se pagan con un recargo del cincuenta por ciento sobre el sueldo convenido para la jornada ordinaria (art. 32)."
+    },
+    {
+      "id": "Q07",
+      "topic": "jornada",
+      "query": "¿Tengo derecho a un tiempo para almorzar en el trabajo?",
+      "relevant_article_ids": [
+        "art-34"
+      ],
+      "ground_truth": "La jornada debe dividirse en dos partes dejando al menos media hora para la colación, que no se considera tiempo trabajado. Art. 34."
+    },
+    {
+      "id": "Q08",
+      "topic": "jornada",
+      "query": "¿Me pueden obligar a trabajar los domingos?",
+      "relevant_article_ids": [
+        "art-35",
+        "art-38"
+      ],
+      "ground_truth": "Los domingos y festivos son de descanso (art. 35), salvo en actividades exceptuadas por ley —faenas continuas, comercio y servicios de atención al público, entre otras— que pueden distribuir la jornada incluyendo domingos; en comercio con atención al público las horas ordinarias del domingo se pagan con un recargo de al menos 30% (art. 38)."
+    },
+    {
+      "id": "Q09",
+      "topic": "contrato",
+      "query": "Empecé a trabajar hace tres semanas y todavía no me hacen firmar contrato, ¿es legal?",
+      "relevant_article_ids": [
+        "art-9"
+      ],
+      "ground_truth": "El contrato debe constar por escrito dentro de quince días desde la incorporación (cinco días si es por obra o de menos de treinta días); si el empleador no lo hace es sancionado con multa. Art. 9."
+    },
+    {
+      "id": "Q10",
+      "topic": "contrato",
+      "query": "¿Cuánto puede durar como máximo un contrato a plazo fijo?",
+      "relevant_article_ids": [
+        "art-159"
+      ],
+      "ground_truth": "El contrato de plazo fijo no puede exceder de un año (dos años para gerentes o profesionales/técnicos titulados); la segunda renovación lo transforma en indefinido. Art. 159 N°4."
+    },
+    {
+      "id": "Q11",
+      "topic": "remuneraciones",
+      "query": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+      "relevant_article_ids": [
+        "art-55"
+      ],
+      "ground_truth": "Las remuneraciones se pagan con la periodicidad del contrato, pero los períodos no pueden exceder de un mes. Art. 55."
+    },
+    {
+      "id": "Q12",
+      "topic": "remuneraciones",
+      "query": "¿Qué descuentos me pueden hacer del sueldo?",
+      "relevant_article_ids": [
+        "art-58"
+      ],
+      "ground_truth": "El empleador debe descontar impuestos, cotizaciones de seguridad social, cuotas sindicales y obligaciones con instituciones de previsión; otros descuentos requieren acuerdo escrito y tienen límites. Art. 58."
+    },
+    {
+      "id": "Q13",
+      "topic": "remuneraciones",
+      "query": "¿Qué es la gratificación y cuánto me corresponde?",
+      "relevant_article_ids": [
+        "art-47",
+        "art-50"
+      ],
+      "ground_truth": "Las empresas con fines de lucro que obtengan utilidades deben gratificar a sus trabajadores (art. 47); pueden optar por pagar el 25% de lo devengado en remuneraciones mensuales, con tope de 4,75 ingresos mínimos mensuales al año (art. 50)."
+    },
+    {
+      "id": "Q14",
+      "topic": "permisos",
+      "query": "Falleció mi papá, ¿cuántos días de permiso me dan en el trabajo?",
+      "relevant_article_ids": [
+        "art-66"
+      ],
+      "ground_truth": "Por muerte del padre o de la madre se tiene derecho a cuatro días hábiles de permiso pagado (diez días corridos por muerte de un hijo, siete por muerte del cónyuge o conviviente civil). Art. 66."
+    },
+    {
+      "id": "Q15",
+      "topic": "permisos",
+      "query": "Me voy a casar, ¿tengo días libres pagados?",
+      "relevant_article_ids": [
+        "art-207-bis"
+      ],
+      "ground_truth": "Al contraer matrimonio o celebrar un acuerdo de unión civil se tienen cinco días hábiles continuos de permiso pagado, adicionales al feriado anual. Art. 207 bis."
+    },
+    {
+      "id": "Q16",
+      "topic": "termino",
+      "query": "Me echaron por necesidades de la empresa después de 6 años, ¿cuánta indemnización me corresponde?",
+      "relevant_article_ids": [
+        "art-163",
+        "art-161"
+      ],
+      "ground_truth": "Si el contrato duró un año o más y terminó por necesidades de la empresa (art. 161), corresponde una indemnización de treinta días de la última remuneración mensual por cada año de servicio y fracción superior a seis meses, con tope de 330 días (art. 163). Con 6 años serían 180 días de remuneración."
+    },
+    {
+      "id": "Q17",
+      "topic": "termino",
+      "query": "¿Me tienen que avisar con anticipación antes de despedirme?",
+      "relevant_article_ids": [
+        "art-161",
+        "art-162"
+      ],
+      "ground_truth": "Por necesidades de la empresa o desahucio, el aviso debe darse con al menos treinta días de anticipación, con copia a la Inspección del Trabajo; si no se da, el empleador debe pagar una indemnización sustitutiva equivalente a la última remuneración mensual. Arts. 161 y 162."
+    },
+    {
+      "id": "Q18",
+      "topic": "termino",
+      "query": "¿Por qué razones me pueden despedir sin pagarme nada de indemnización?",
+      "relevant_article_ids": [
+        "art-160"
+      ],
+      "ground_truth": "El contrato termina sin indemnización por causales como conductas indebidas graves (falta de probidad, acoso sexual o laboral, vías de hecho), negociaciones prohibidas, ausencias injustificadas, abandono del trabajo, actos que afecten la seguridad o incumplimiento grave de las obligaciones. Art. 160."
+    },
+    {
+      "id": "Q19",
+      "topic": "termino",
+      "query": "¿Qué tiene que decir la carta de despido y cuándo me la tienen que entregar?",
+      "relevant_article_ids": [
+        "art-162"
+      ],
+      "ground_truth": "El empleador debe comunicar el despido por escrito, personalmente o por carta certificada, indicando las causales invocadas, los hechos en que se funda y el estado de pago de las cotizaciones, dentro de tres días hábiles (seis si es por caso fortuito), con copia a la Inspección del Trabajo. Art. 162."
+    },
+    {
+      "id": "Q20",
+      "topic": "termino",
+      "query": "Quiero renunciar, ¿con cuánta anticipación tengo que avisar?",
+      "relevant_article_ids": [
+        "art-159"
+      ],
+      "ground_truth": "La renuncia del trabajador requiere dar aviso al empleador con al menos treinta días de anticipación. Art. 159 N°2."
+    },
+    {
+      "id": "Q21",
+      "topic": "termino",
+      "query": "Me despidieron injustamente, ¿hasta cuándo tengo plazo para demandar?",
+      "relevant_article_ids": [
+        "art-168"
+      ],
+      "ground_truth": "Se puede recurrir al juzgado dentro de sesenta días hábiles contados desde la separación (plazo que se suspende al reclamar ante la Inspección del Trabajo, sin exceder noventa días hábiles). Art. 168."
+    },
+    {
+      "id": "Q22",
+      "topic": "termino",
+      "query": "¿El finiquito tiene que ser firmado ante un ministro de fe?",
+      "relevant_article_ids": [
+        "art-177"
+      ],
+      "ground_truth": "El finiquito debe constar por escrito y, para que el empleador pueda invocarlo, ser firmado por el trabajador y ratificado ante el inspector del trabajo (o ante notario, oficial del Registro Civil o secretario municipal), o firmado electrónicamente en el sitio de la Dirección del Trabajo. Debe otorgarse y pagarse dentro de diez días hábiles desde la separación. Art. 177."
+    },
+    {
+      "id": "Q23",
+      "topic": "maternidad",
+      "query": "Estoy embarazada, ¿me pueden despedir?",
+      "relevant_article_ids": [
+        "art-201",
+        "art-174"
+      ],
+      "ground_truth": "La trabajadora embarazada goza de fuero laboral desde el embarazo hasta un año después del descanso de maternidad (art. 201); durante el fuero el empleador solo puede despedirla con autorización previa del juez (art. 174)."
+    },
+    {
+      "id": "Q24",
+      "topic": "maternidad",
+      "query": "¿Cuántas semanas dura el prenatal y el postnatal?",
+      "relevant_article_ids": [
+        "art-195"
+      ],
+      "ground_truth": "Las trabajadoras tienen un descanso de maternidad de seis semanas antes del parto y doce semanas después de él. Art. 195."
+    },
+    {
+      "id": "Q25",
+      "topic": "maternidad",
+      "query": "¿Qué es el postnatal parental y cuánto dura?",
+      "relevant_article_ids": [
+        "art-197-bis"
+      ],
+      "ground_truth": "Es un permiso de doce semanas a continuación del postnatal, con subsidio; puede tomarse como dieciocho semanas a media jornada, y parte puede traspasarse al padre. Art. 197 bis."
+    },
+    {
+      "id": "Q26",
+      "topic": "maternidad",
+      "query": "¿La empresa está obligada a darme sala cuna para mi hijo?",
+      "relevant_article_ids": [
+        "art-203"
+      ],
+      "ground_truth": "Las empresas que ocupan veinte o más trabajadoras deben tener salas cuna para hijos menores de dos años, o pagar los gastos de una sala cuna externa. Art. 203."
+    },
+    {
+      "id": "Q27",
+      "topic": "maternidad",
+      "query": "¿Tengo derecho a salir del trabajo para darle leche a mi guagua?",
+      "relevant_article_ids": [
+        "art-206"
+      ],
+      "ground_truth": "Las trabajadoras tienen derecho a disponer de al menos una hora al día para dar alimento a sus hijos menores de dos años, en las formas que acuerden con el empleador. Art. 206."
+    },
+    {
+      "id": "Q28",
+      "topic": "teletrabajo",
+      "query": "Hago teletrabajo, ¿mi jefe me puede escribir a cualquier hora?",
+      "relevant_article_ids": [
+        "art-152-quater-j"
+      ],
+      "ground_truth": "Los trabajadores a distancia que distribuyen libremente su horario y los teletrabajadores excluidos de la limitación de jornada tienen derecho a desconexión de al menos doce horas continuas en veinticuatro horas, sin obligación de responder comunicaciones. Art. 152 quáter J."
+    },
+    {
+      "id": "Q29",
+      "topic": "acoso",
+      "query": "Mi jefe me humilla y me hostiga todos los días, ¿eso es acoso laboral según la ley?",
+      "relevant_article_ids": [
+        "art-2",
+        "art-211-a"
+      ],
+      "ground_truth": "El acoso laboral es toda conducta de agresión u hostigamiento, ejercida por el empleador o por trabajadores, que cause menoscabo, maltrato o humillación, o amenace la situación laboral; es contrario a la dignidad (art. 2). El empleador debe prevenir, investigar y sancionar el acoso (art. 211-A)."
+    },
+    {
+      "id": "Q30",
+      "topic": "prescripcion",
+      "query": "¿Cuánto tiempo tengo para reclamar derechos laborales que no me pagaron?",
+      "relevant_article_ids": [
+        "art-510"
+      ],
+      "ground_truth": "Los derechos regidos por el Código prescriben en dos años desde que se hicieron exigibles; las acciones derivadas del término del contrato, en seis meses desde el término. Art. 510."
+    },
+    {
+      "id": "Q31",
+      "topic": "sindicatos",
+      "query": "¿Cuántos trabajadores se necesitan para formar un sindicato en mi empresa?",
+      "relevant_article_ids": [
+        "art-227"
+      ],
+      "ground_truth": "En empresas de más de cincuenta trabajadores se requieren al menos veinticinco que representen el diez por ciento del total (si no existe sindicato, pueden constituirlo ocho, completando el quórum en un año). En empresas de cincuenta o menos, ocho trabajadores que representen al menos el 50% del total. Art. 227."
+    },
+    {
+      "id": "Q32",
+      "topic": "huelga",
+      "query": "Si estamos en huelga, ¿la empresa puede contratar a otros para reemplazarnos?",
+      "relevant_article_ids": [
+        "art-345"
+      ],
+      "ground_truth": "No: se prohíbe el reemplazo de los trabajadores en huelga; hacerlo es una práctica desleal grave. Art. 345."
+    },
+    {
+      "id": "Q33",
+      "topic": "casa_particular",
+      "query": "Soy nana puertas afuera, ¿cuántas horas puedo trabajar a la semana?",
+      "relevant_article_ids": [
+        "art-149"
+      ],
+      "ground_truth": "La jornada de las trabajadoras de casa particular que no viven en la casa del empleador no puede exceder de cuarenta horas semanales. Art. 149."
+    },
+    {
+      "id": "Q34",
+      "topic": "seguridad",
+      "query": "¿El empleador tiene la obligación de protegerme de accidentes en el trabajo?",
+      "relevant_article_ids": [
+        "art-184"
+      ],
+      "ground_truth": "El empleador está obligado a tomar todas las medidas necesarias para proteger eficazmente la vida y salud de los trabajadores, informar los riesgos y mantener condiciones adecuadas de higiene y seguridad. Art. 184."
+    },
+    {
+      "id": "Q35",
+      "topic": "fuera_de_alcance",
+      "query": "¿Qué porcentaje de mi sueldo se va a la AFP?",
+      "relevant_article_ids": [],
+      "out_of_scope": true,
+      "ground_truth": "El Código del Trabajo no fija la tasa de cotización de AFP; eso lo regula el sistema de pensiones (DL 3.500). Corresponde responder que está fuera del alcance y orientar a la Superintendencia de Pensiones."
+    },
+    {
+      "id": "Q36",
+      "topic": "fuera_de_alcance",
+      "query": "¿Cómo renuevo mi licencia de conducir?",
+      "relevant_article_ids": [],
+      "out_of_scope": true,
+      "ground_truth": "No es una consulta laboral; está fuera del alcance del Código del Trabajo."
+    },
+    {
+      "id": "Q37",
+      "topic": "fuera_de_alcance",
+      "query": "Soy profesor de un colegio municipal, ¿qué dice el Estatuto Docente sobre mis vacaciones?",
+      "relevant_article_ids": [],
+      "out_of_scope": true,
+      "ground_truth": "Los profesionales de la educación municipal se rigen por el Estatuto Docente (Ley 19.070), no por el Código del Trabajo en esa materia; corresponde indicar que está fuera del alcance y orientar a esa normativa."
+    }
+  ]
+}
