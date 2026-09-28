@@ -1,0 +1,2267 @@
+{
+ "A": {
+  "label": "Vectorial / rerank No",
+  "summary": {
+   "hit": 0.9411764705882353,
+   "recall": 0.8676470588235294,
+   "mrr": 0.7401960784313726,
+   "latency_p50_ms": 12.112369993701577
+  },
+  "per_query": {
+   "Q01": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 96.19254001881927,
+    "retrieved": [
+     "art-76-bis",
+     "art-68",
+     "art-70",
+     "art-67",
+     "art-75-bis"
+    ]
+   },
+   "Q02": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 16.110323020257056,
+    "retrieved": [
+     "art-68",
+     "art-67",
+     "art-t-8",
+     "art-t-2",
+     "art-32"
+    ]
+   },
+   "Q03": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 22.399729990866035,
+    "retrieved": [
+     "art-70",
+     "art-76-bis",
+     "art-376",
+     "art-68",
+     "art-76"
+    ]
+   },
+   "Q04": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 24.662444018758833,
+    "retrieved": [
+     "art-54",
+     "art-73",
+     "art-56",
+     "art-76-bis",
+     "art-54-bis"
+    ]
+   },
+   "Q05": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 14.938423002604395,
+    "retrieved": [
+     "art-22-bis",
+     "art-28",
+     "art-22",
+     "art-149",
+     "art-25-ter"
+    ]
+   },
+   "Q06": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14.510177017655224,
+    "retrieved": [
+     "art-32",
+     "art-31",
+     "art-29",
+     "art-30",
+     "art-24"
+    ]
+   },
+   "Q07": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 13.628706044983119,
+    "retrieved": [
+     "art-206",
+     "art-34-bis",
+     "art-34",
+     "art-27",
+     "art-152-quater-c"
+    ]
+   },
+   "Q08": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.5,
+    "latency_ms": 10.918493033386767,
+    "retrieved": [
+     "art-37",
+     "art-38",
+     "art-38-bis",
+     "art-35-bis",
+     "art-39"
+    ]
+   },
+   "Q09": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 12.064673006534576,
+    "retrieved": [
+     "art-147",
+     "art-9",
+     "art-145-b",
+     "art-146-ter",
+     "art-308"
+    ]
+   },
+   "Q10": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12.150861031841487,
+    "retrieved": [
+     "art-159",
+     "art-167",
+     "art-324",
+     "art-152-bis-d",
+     "art-163"
+    ]
+   },
+   "Q11": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.191948025953025,
+    "retrieved": [
+     "art-55",
+     "art-44",
+     "art-56",
+     "art-152-bis-h",
+     "art-63"
+    ]
+   },
+   "Q12": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.538545018993318,
+    "retrieved": [
+     "art-58",
+     "art-42",
+     "art-50",
+     "art-44",
+     "art-48"
+    ]
+   },
+   "Q13": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.5,
+    "latency_ms": 12.885491014458239,
+    "retrieved": [
+     "art-49",
+     "art-47",
+     "art-51",
+     "art-52",
+     "art-46"
+    ]
+   },
+   "Q14": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12.801281991414726,
+    "retrieved": [
+     "art-66",
+     "art-199-bis",
+     "art-195",
+     "art-207-bis",
+     "art-197-bis"
+    ]
+   },
+   "Q15": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12.048856006003916,
+    "retrieved": [
+     "art-207-bis",
+     "art-150",
+     "art-152-ter-l",
+     "art-66",
+     "art-152-ter-k"
+    ]
+   },
+   "Q16": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 11.514780984725803,
+    "retrieved": [
+     "art-163",
+     "art-164",
+     "art-172",
+     "art-40-bis-d",
+     "art-168"
+    ]
+   },
+   "Q17": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 12.44751102058217,
+    "retrieved": [
+     "art-162",
+     "art-152-quinquies-a",
+     "art-177",
+     "art-163-bis",
+     "art-12"
+    ]
+   },
+   "Q18": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 12.433048977982253,
+    "retrieved": [
+     "art-168",
+     "art-162",
+     "art-169",
+     "art-161",
+     "art-489"
+    ]
+   },
+   "Q19": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.325515049975365,
+    "retrieved": [
+     "art-162",
+     "art-177",
+     "art-508",
+     "art-163-bis",
+     "art-161"
+    ]
+   },
+   "Q20": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 11.897950025741011,
+    "retrieved": [
+     "art-162",
+     "art-177",
+     "art-376",
+     "art-12",
+     "art-163-bis"
+    ]
+   },
+   "Q21": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 12.906563002616167,
+    "retrieved": [
+     "art-510",
+     "art-168",
+     "art-489",
+     "art-171",
+     "art-469"
+    ]
+   },
+   "Q22": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12.073878955561668,
+    "retrieved": [
+     "art-177",
+     "art-313",
+     "art-162",
+     "art-163-bis",
+     "art-218"
+    ]
+   },
+   "Q23": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.5,
+    "latency_ms": 10.84819994866848,
+    "retrieved": [
+     "art-202",
+     "art-201",
+     "art-194",
+     "art-196",
+     "art-197-bis"
+    ]
+   },
+   "Q24": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 12.154121999628842,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-201",
+     "art-195",
+     "art-200"
+    ]
+   },
+   "Q25": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.207259027287364,
+    "retrieved": [
+     "art-197-bis",
+     "art-196",
+     "art-201",
+     "art-200",
+     "art-195"
+    ]
+   },
+   "Q26": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12.519266980234534,
+    "retrieved": [
+     "art-203",
+     "art-205",
+     "art-206",
+     "art-197",
+     "art-200"
+    ]
+   },
+   "Q27": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.066408012993634,
+    "retrieved": [
+     "art-206",
+     "art-200",
+     "art-27",
+     "art-199",
+     "art-195"
+    ]
+   },
+   "Q28": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12.328654993325472,
+    "retrieved": [
+     "art-152-quater-j",
+     "art-152-quater-o-ter",
+     "art-33",
+     "art-152-quater-h",
+     "art-152-quater-g"
+    ]
+   },
+   "Q29": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 12.963360990397632,
+    "retrieved": [
+     "art-211-b-bis",
+     "art-2",
+     "art-211-e",
+     "art-211-a",
+     "art-160"
+    ]
+   },
+   "Q30": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10.818823997396976,
+    "retrieved": [
+     "art-510",
+     "art-500",
+     "art-402",
+     "art-340",
+     "art-469"
+    ]
+   },
+   "Q31": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.70576794538647,
+    "retrieved": [
+     "art-227",
+     "art-228",
+     "art-229",
+     "art-221",
+     "art-216"
+    ]
+   },
+   "Q32": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10.87646500673145,
+    "retrieved": [
+     "art-345",
+     "art-355",
+     "art-363",
+     "art-359",
+     "art-353"
+    ]
+   },
+   "Q33": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11.983375996351242,
+    "retrieved": [
+     "art-149",
+     "art-22-bis",
+     "art-27",
+     "art-24",
+     "art-22"
+    ]
+   },
+   "Q34": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 11.091052962001413,
+    "retrieved": [
+     "art-209",
+     "art-184",
+     "art-210",
+     "art-211",
+     "art-184-bis"
+    ]
+   }
+  }
+ },
+ "B": {
+  "label": "Híbrida / rerank No",
+  "summary": {
+   "hit": 0.7941176470588235,
+   "recall": 0.7205882352941176,
+   "mrr": 0.6186274509803922,
+   "latency_p50_ms": 21.003603498684242
+  },
+  "per_query": {
+   "Q01": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 54.161904961802065,
+    "retrieved": [
+     "art-67",
+     "art-75-bis",
+     "art-76-bis",
+     "art-73",
+     "art-74"
+    ]
+   },
+   "Q02": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 23.573183978442103,
+    "retrieved": [
+     "art-67",
+     "art-68",
+     "art-167",
+     "art-376",
+     "art-163"
+    ]
+   },
+   "Q03": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 24.659684975631535,
+    "retrieved": [
+     "art-376",
+     "art-68",
+     "art-67",
+     "art-70",
+     "art-22-bis"
+    ]
+   },
+   "Q04": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 28.185693023260683,
+    "retrieved": [
+     "art-76-bis",
+     "art-376",
+     "art-152-quater-v",
+     "art-67",
+     "art-128"
+    ]
+   },
+   "Q05": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 26.160193025134504,
+    "retrieved": [
+     "art-22-bis",
+     "art-25-ter",
+     "art-149",
+     "art-25-bis",
+     "art-249"
+    ]
+   },
+   "Q06": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 23.319763015024364,
+    "retrieved": [
+     "art-32",
+     "art-25-ter",
+     "art-24",
+     "art-22-bis",
+     "art-31"
+    ]
+   },
+   "Q07": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 18.847421975806355,
+    "retrieved": [
+     "art-25-ter",
+     "art-199-bis",
+     "art-66-bis",
+     "art-206",
+     "art-152-quater-j"
+    ]
+   },
+   "Q08": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 19.89464700454846,
+    "retrieved": [
+     "art-38",
+     "art-38-bis",
+     "art-35-bis",
+     "art-45",
+     "art-111"
+    ]
+   },
+   "Q09": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 27.696847973857075,
+    "retrieved": [
+     "art-9",
+     "art-147",
+     "art-152-quater-b",
+     "art-t-183-n",
+     "art-t-183-m"
+    ]
+   },
+   "Q10": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 22.74860697798431,
+    "retrieved": [
+     "art-159",
+     "art-152-quater-a",
+     "art-274",
+     "art-163",
+     "art-163-bis"
+    ]
+   },
+   "Q11": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 21.754736022558063,
+    "retrieved": [
+     "art-44",
+     "art-42",
+     "art-t-23",
+     "art-54-bis",
+     "art-45"
+    ]
+   },
+   "Q12": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 21.008823008742183,
+    "retrieved": [
+     "art-42",
+     "art-44",
+     "art-45",
+     "art-59",
+     "art-32"
+    ]
+   },
+   "Q13": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "latency_ms": 17.810643010307103,
+    "retrieved": [
+     "art-49",
+     "art-48",
+     "art-52",
+     "art-47",
+     "art-46"
+    ]
+   },
+   "Q14": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 19.56214604433626,
+    "retrieved": [
+     "art-66",
+     "art-199-bis",
+     "art-197-bis",
+     "art-195",
+     "art-66-bis"
+    ]
+   },
+   "Q15": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14.771442976780236,
+    "retrieved": [
+     "art-207-bis",
+     "art-150",
+     "art-152-ter-l",
+     "art-66",
+     "art-152-ter-k"
+    ]
+   },
+   "Q16": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 22.229838010389358,
+    "retrieved": [
+     "art-163",
+     "art-164",
+     "art-169",
+     "art-489",
+     "art-176"
+    ]
+   },
+   "Q17": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 19.817574007902294,
+    "retrieved": [
+     "art-162",
+     "art-12",
+     "art-152-quinquies-a",
+     "art-437",
+     "art-152-quater-o-ter"
+    ]
+   },
+   "Q18": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 19.905100052710623,
+    "retrieved": [
+     "art-489",
+     "art-169",
+     "art-163",
+     "art-176",
+     "art-163-bis"
+    ]
+   },
+   "Q19": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 19.252195954322815,
+    "retrieved": [
+     "art-162",
+     "art-177",
+     "art-440",
+     "art-489",
+     "art-437"
+    ]
+   },
+   "Q20": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 21.287734038196504,
+    "retrieved": [
+     "art-162",
+     "art-12",
+     "art-437",
+     "art-152-quinquies-a",
+     "art-152-quater-o-ter"
+    ]
+   },
+   "Q21": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 17.531570978462696,
+    "retrieved": [
+     "art-500",
+     "art-171",
+     "art-168",
+     "art-162",
+     "art-452"
+    ]
+   },
+   "Q22": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 19.556510029360652,
+    "retrieved": [
+     "art-177",
+     "art-313",
+     "art-218",
+     "art-163-bis",
+     "art-162"
+    ]
+   },
+   "Q23": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "latency_ms": 18.805656989570707,
+    "retrieved": [
+     "art-202",
+     "art-196",
+     "art-194",
+     "art-201",
+     "art-197-bis"
+    ]
+   },
+   "Q24": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "latency_ms": 20.4132660292089,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-201",
+     "art-200",
+     "art-195"
+    ]
+   },
+   "Q25": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 18.88807798968628,
+    "retrieved": [
+     "art-197-bis",
+     "art-196",
+     "art-201",
+     "art-200",
+     "art-198"
+    ]
+   },
+   "Q26": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 17.531387973576784,
+    "retrieved": [
+     "art-203",
+     "art-206",
+     "art-205",
+     "art-194",
+     "art-27"
+    ]
+   },
+   "Q27": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 17.179483955260366,
+    "retrieved": [
+     "art-206",
+     "art-203",
+     "art-27",
+     "art-205",
+     "art-66-quinquies"
+    ]
+   },
+   "Q28": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 23.963735962752253,
+    "retrieved": [
+     "art-152-quater-j",
+     "art-25-ter",
+     "art-34-bis",
+     "art-152-quater-k",
+     "art-149"
+    ]
+   },
+   "Q29": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 19.924291991628706,
+    "retrieved": [
+     "art-211-e",
+     "art-211-a",
+     "art-2",
+     "art-211-b-bis",
+     "art-211-c"
+    ]
+   },
+   "Q30": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 25.98453703103587,
+    "retrieved": [
+     "art-340",
+     "art-402",
+     "art-500",
+     "art-510",
+     "art-339"
+    ]
+   },
+   "Q31": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 22.316155023872852,
+    "retrieved": [
+     "art-227",
+     "art-221",
+     "art-216",
+     "art-235",
+     "art-231"
+    ]
+   },
+   "Q32": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 20.9983839886263,
+    "retrieved": [
+     "art-345",
+     "art-355",
+     "art-403",
+     "art-358",
+     "art-353"
+    ]
+   },
+   "Q33": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 31.141511048190296,
+    "retrieved": [
+     "art-22-bis",
+     "art-149",
+     "art-25-ter",
+     "art-34-bis",
+     "art-24"
+    ]
+   },
+   "Q34": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 24.96248099487275,
+    "retrieved": [
+     "art-184",
+     "art-211",
+     "art-209",
+     "art-145-bis-f",
+     "art-210"
+    ]
+   }
+  }
+ },
+ "C": {
+  "label": "Vectorial / rerank Sí (50)",
+  "summary": {
+   "hit": 0.9411764705882353,
+   "recall": 0.8382352941176471,
+   "mrr": 0.667156862745098,
+   "latency_p50_ms": 11125.339083955623
+  },
+  "per_query": {
+   "Q01": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 13564.825380977709,
+    "retrieved": [
+     "art-76",
+     "art-67",
+     "art-32",
+     "art-70",
+     "art-68"
+    ]
+   },
+   "Q02": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 13626.52552902,
+    "retrieved": [
+     "art-68",
+     "art-67",
+     "art-376",
+     "art-25-ter",
+     "art-32"
+    ]
+   },
+   "Q03": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 13610.168624960352,
+    "retrieved": [
+     "art-70",
+     "art-34",
+     "art-23",
+     "art-199-bis",
+     "art-67"
+    ]
+   },
+   "Q04": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "latency_ms": 13618.309690034948,
+    "retrieved": [
+     "art-67",
+     "art-45",
+     "art-61",
+     "art-32",
+     "art-73"
+    ]
+   },
+   "Q05": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 13522.785808949266,
+    "retrieved": [
+     "art-28",
+     "art-149",
+     "art-22",
+     "art-31",
+     "art-25-ter"
+    ]
+   },
+   "Q06": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 12189.526111003943,
+    "retrieved": [
+     "art-31",
+     "art-34-bis",
+     "art-24",
+     "art-40-bis-a",
+     "art-25-ter"
+    ]
+   },
+   "Q07": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 10805.922471976373,
+    "retrieved": [
+     "art-152-ter-k",
+     "art-206",
+     "art-23",
+     "art-38-bis",
+     "art-68"
+    ]
+   },
+   "Q08": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.2,
+    "latency_ms": 8976.161555037834,
+    "retrieved": [
+     "art-109",
+     "art-36",
+     "art-45",
+     "art-145-d",
+     "art-38"
+    ]
+   },
+   "Q09": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11108.682294958271,
+    "retrieved": [
+     "art-9",
+     "art-177",
+     "art-9-bis",
+     "art-152-quater-o-ter",
+     "art-147"
+    ]
+   },
+   "Q10": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10797.990901977755,
+    "retrieved": [
+     "art-159",
+     "art-t-183-ac",
+     "art-177",
+     "art-t-183-o",
+     "art-t-183-j"
+    ]
+   },
+   "Q11": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 9701.076793018728,
+    "retrieved": [
+     "art-152-bis-h",
+     "art-44",
+     "art-139",
+     "art-55",
+     "art-56"
+    ]
+   },
+   "Q12": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10775.300145964138,
+    "retrieved": [
+     "art-58",
+     "art-34-bis",
+     "art-42",
+     "art-64",
+     "art-51"
+    ]
+   },
+   "Q13": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "latency_ms": 11149.322506040335,
+    "retrieved": [
+     "art-t-183-j",
+     "art-41",
+     "art-42",
+     "art-47",
+     "art-54-bis"
+    ]
+   },
+   "Q14": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10683.667459001299,
+    "retrieved": [
+     "art-66",
+     "art-195",
+     "art-199-bis",
+     "art-201",
+     "art-206"
+    ]
+   },
+   "Q15": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 9550.088529998902,
+    "retrieved": [
+     "art-207-bis",
+     "art-150",
+     "art-66",
+     "art-162",
+     "art-149"
+    ]
+   },
+   "Q16": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 10452.495651028585,
+    "retrieved": [
+     "art-167",
+     "art-164",
+     "art-163",
+     "art-489",
+     "art-40-bis-d"
+    ]
+   },
+   "Q17": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 10499.762690044008,
+    "retrieved": [
+     "art-162",
+     "art-376",
+     "art-12",
+     "art-152-quater-o-ter",
+     "art-152-quinquies-a"
+    ]
+   },
+   "Q18": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10563.641151995398,
+    "retrieved": [
+     "art-160",
+     "art-162",
+     "art-73",
+     "art-58",
+     "art-168"
+    ]
+   },
+   "Q19": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10552.994287980255,
+    "retrieved": [
+     "art-162",
+     "art-163-bis",
+     "art-177",
+     "art-211-e",
+     "art-489"
+    ]
+   },
+   "Q20": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.2,
+    "latency_ms": 10840.140004991554,
+    "retrieved": [
+     "art-162",
+     "art-152-quater-o-ter",
+     "art-376",
+     "art-152-quinquies-a",
+     "art-159"
+    ]
+   },
+   "Q21": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 11061.089653987437,
+    "retrieved": [
+     "art-510",
+     "art-168",
+     "art-489",
+     "art-177",
+     "art-162"
+    ]
+   },
+   "Q22": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 10806.456857011653,
+    "retrieved": [
+     "art-177",
+     "art-162",
+     "art-223",
+     "art-497",
+     "art-437"
+    ]
+   },
+   "Q23": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "latency_ms": 10809.229162987322,
+    "retrieved": [
+     "art-196",
+     "art-202",
+     "art-195",
+     "art-201",
+     "art-199-bis"
+    ]
+   },
+   "Q24": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 11141.995872952975,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-195",
+     "art-200",
+     "art-t-13"
+    ]
+   },
+   "Q25": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 12215.450306015555,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-201",
+     "art-200",
+     "art-195"
+    ]
+   },
+   "Q26": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 11902.969121991191,
+    "retrieved": [
+     "art-203",
+     "art-206",
+     "art-205",
+     "art-199-bis",
+     "art-27"
+    ]
+   },
+   "Q27": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 11084.809013002086,
+    "retrieved": [
+     "art-199-bis",
+     "art-206",
+     "art-34-bis",
+     "art-152-quater-o-ter",
+     "art-203"
+    ]
+   },
+   "Q28": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 16752.016209007706,
+    "retrieved": [
+     "art-152-quater-j",
+     "art-152-quater-o-ter",
+     "art-152-quater-n",
+     "art-249",
+     "art-250"
+    ]
+   },
+   "Q29": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 14671.432149014436,
+    "retrieved": [
+     "art-2",
+     "art-160",
+     "art-211-b-bis",
+     "art-211-e",
+     "art-211-c"
+    ]
+   },
+   "Q30": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12452.65657803975,
+    "retrieved": [
+     "art-510",
+     "art-500",
+     "art-152-quater-o-ter",
+     "art-489",
+     "art-170"
+    ]
+   },
+   "Q31": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12453.074807999656,
+    "retrieved": [
+     "art-227",
+     "art-228",
+     "art-235",
+     "art-229",
+     "art-364"
+    ]
+   },
+   "Q32": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 11684.642146981787,
+    "retrieved": [
+     "art-t-183-p",
+     "art-357",
+     "art-345",
+     "art-363",
+     "art-403"
+    ]
+   },
+   "Q33": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 12281.130150018726,
+    "retrieved": [
+     "art-109",
+     "art-22",
+     "art-106",
+     "art-25-bis",
+     "art-34-bis"
+    ]
+   },
+   "Q34": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 13868.08862502221,
+    "retrieved": [
+     "art-184",
+     "art-209",
+     "art-210",
+     "art-184-bis",
+     "art-211"
+    ]
+   }
+  }
+ },
+ "D": {
+  "label": "Híbrida / rerank Sí (50)",
+  "summary": {
+   "hit": 0.8823529411764706,
+   "recall": 0.7794117647058824,
+   "mrr": 0.640686274509804,
+   "latency_p50_ms": 13988.575430499623
+  },
+  "per_query": {
+   "Q01": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 11632.498303020839,
+    "retrieved": [
+     "art-76",
+     "art-67",
+     "art-32",
+     "art-70",
+     "art-68"
+    ]
+   },
+   "Q02": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12541.390315978788,
+    "retrieved": [
+     "art-68",
+     "art-67",
+     "art-376",
+     "art-199-bis",
+     "art-203"
+    ]
+   },
+   "Q03": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12322.193506988697,
+    "retrieved": [
+     "art-70",
+     "art-34",
+     "art-206",
+     "art-203",
+     "art-23"
+    ]
+   },
+   "Q04": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 12443.031779956073,
+    "retrieved": [
+     "art-67",
+     "art-203",
+     "art-45",
+     "art-34-bis",
+     "art-61"
+    ]
+   },
+   "Q05": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 12341.044027009048,
+    "retrieved": [
+     "art-28",
+     "art-149",
+     "art-22",
+     "art-31",
+     "art-25-ter"
+    ]
+   },
+   "Q06": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 13225.030497997068,
+    "retrieved": [
+     "art-31",
+     "art-34-bis",
+     "art-24",
+     "art-40-bis-a",
+     "art-25-ter"
+    ]
+   },
+   "Q07": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 12303.383161022794,
+    "retrieved": [
+     "art-206",
+     "art-23",
+     "art-25-bis",
+     "art-66-ter",
+     "art-34-bis"
+    ]
+   },
+   "Q08": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.2,
+    "latency_ms": 12661.706904007588,
+    "retrieved": [
+     "art-109",
+     "art-36",
+     "art-45",
+     "art-145-d",
+     "art-38"
+    ]
+   },
+   "Q09": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 13930.29176199343,
+    "retrieved": [
+     "art-9",
+     "art-66-bis",
+     "art-177",
+     "art-163-bis",
+     "art-9-bis"
+    ]
+   },
+   "Q10": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 13804.250582994428,
+    "retrieved": [
+     "art-159",
+     "art-t-183-ac",
+     "art-t-183-o",
+     "art-t-183-j",
+     "art-25-bis"
+    ]
+   },
+   "Q11": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 17223.773067991715,
+    "retrieved": [
+     "art-152-bis-h",
+     "art-44",
+     "art-139",
+     "art-55",
+     "art-56"
+    ]
+   },
+   "Q12": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 17733.017415972427,
+    "retrieved": [
+     "art-58",
+     "art-34-bis",
+     "art-42",
+     "art-64",
+     "art-51"
+    ]
+   },
+   "Q13": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "latency_ms": 13650.454699003603,
+    "retrieved": [
+     "art-t-183-j",
+     "art-41",
+     "art-42",
+     "art-47",
+     "art-54-bis"
+    ]
+   },
+   "Q14": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14119.644023943692,
+    "retrieved": [
+     "art-66",
+     "art-195",
+     "art-199-bis",
+     "art-201",
+     "art-206"
+    ]
+   },
+   "Q15": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 12902.508038037922,
+    "retrieved": [
+     "art-207-bis",
+     "art-150",
+     "art-66",
+     "art-162",
+     "art-149"
+    ]
+   },
+   "Q16": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 13659.789158031344,
+    "retrieved": [
+     "art-167",
+     "art-164",
+     "art-163",
+     "art-489",
+     "art-152-bis-i"
+    ]
+   },
+   "Q17": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 14350.807768991217,
+    "retrieved": [
+     "art-162",
+     "art-376",
+     "art-66-bis",
+     "art-12",
+     "art-152-quater-o-ter"
+    ]
+   },
+   "Q18": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 13089.061991020571,
+    "retrieved": [
+     "art-9",
+     "art-160",
+     "art-162",
+     "art-168",
+     "art-489"
+    ]
+   },
+   "Q19": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14046.859099005815,
+    "retrieved": [
+     "art-162",
+     "art-163-bis",
+     "art-177",
+     "art-454",
+     "art-211-e"
+    ]
+   },
+   "Q20": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 13644.203837960958,
+    "retrieved": [
+     "art-162",
+     "art-152-quater-o-ter",
+     "art-376",
+     "art-137",
+     "art-152-quinquies-a"
+    ]
+   },
+   "Q21": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 13508.398492995184,
+    "retrieved": [
+     "art-510",
+     "art-168",
+     "art-489",
+     "art-177",
+     "art-162"
+    ]
+   },
+   "Q22": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14628.84631601628,
+    "retrieved": [
+     "art-177",
+     "art-162",
+     "art-223",
+     "art-497",
+     "art-464"
+    ]
+   },
+   "Q23": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.25,
+    "latency_ms": 14113.363736018073,
+    "retrieved": [
+     "art-196",
+     "art-202",
+     "art-195",
+     "art-201",
+     "art-197"
+    ]
+   },
+   "Q24": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 15539.682678005192,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-195",
+     "art-200",
+     "art-22"
+    ]
+   },
+   "Q25": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 15003.180993022397,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-201",
+     "art-200",
+     "art-195"
+    ]
+   },
+   "Q26": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 17126.439783954993,
+    "retrieved": [
+     "art-203",
+     "art-206",
+     "art-205",
+     "art-58",
+     "art-199-bis"
+    ]
+   },
+   "Q27": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 14343.568487965968,
+    "retrieved": [
+     "art-199-bis",
+     "art-206",
+     "art-152-quater-o-ter",
+     "art-203",
+     "art-27"
+    ]
+   },
+   "Q28": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 16556.142044020817,
+    "retrieved": [
+     "art-152-quater-j",
+     "art-152-quater-o-ter",
+     "art-152-quater-n",
+     "art-249",
+     "art-250"
+    ]
+   },
+   "Q29": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 15108.893921016715,
+    "retrieved": [
+     "art-2",
+     "art-160",
+     "art-211-b-bis",
+     "art-211-e",
+     "art-211-c"
+    ]
+   },
+   "Q30": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 13681.221225007903,
+    "retrieved": [
+     "art-510",
+     "art-500",
+     "art-489",
+     "art-170",
+     "art-444"
+    ]
+   },
+   "Q31": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14398.63259298727,
+    "retrieved": [
+     "art-227",
+     "art-228",
+     "art-235",
+     "art-229",
+     "art-364"
+    ]
+   },
+   "Q32": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 15901.702561997809,
+    "retrieved": [
+     "art-t-183-p",
+     "art-357",
+     "art-345",
+     "art-363",
+     "art-137"
+    ]
+   },
+   "Q33": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 14191.559421014972,
+    "retrieved": [
+     "art-109",
+     "art-22",
+     "art-106",
+     "art-112",
+     "art-25-bis"
+    ]
+   },
+   "Q34": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 14767.54864800023,
+    "retrieved": [
+     "art-184",
+     "art-209",
+     "art-210",
+     "art-199-bis",
+     "art-184-bis"
+    ]
+   }
+  }
+ },
+ "E": {
+  "label": "Híbrida / rerank Sí (20)",
+  "summary": {
+   "hit": 0.9117647058823529,
+   "recall": 0.8235294117647058,
+   "mrr": 0.6946078431372549,
+   "latency_p50_ms": 5742.76622699108
+  },
+  "per_query": {
+   "Q01": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 5444.376573024783,
+    "retrieved": [
+     "art-76",
+     "art-67",
+     "art-32",
+     "art-70",
+     "art-68"
+    ]
+   },
+   "Q02": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5630.4113490041345,
+    "retrieved": [
+     "art-68",
+     "art-67",
+     "art-199-bis",
+     "art-203",
+     "art-32"
+    ]
+   },
+   "Q03": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 6144.913988013286,
+    "retrieved": [
+     "art-70",
+     "art-206",
+     "art-203",
+     "art-23",
+     "art-67"
+    ]
+   },
+   "Q04": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.25,
+    "latency_ms": 6414.156863000244,
+    "retrieved": [
+     "art-203",
+     "art-45",
+     "art-32",
+     "art-73",
+     "art-376"
+    ]
+   },
+   "Q05": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 6127.760068979114,
+    "retrieved": [
+     "art-28",
+     "art-149",
+     "art-22",
+     "art-31",
+     "art-25-ter"
+    ]
+   },
+   "Q06": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 6077.207466005348,
+    "retrieved": [
+     "art-31",
+     "art-34-bis",
+     "art-24",
+     "art-40-bis-a",
+     "art-25-ter"
+    ]
+   },
+   "Q07": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 5518.038844980765,
+    "retrieved": [
+     "art-206",
+     "art-25-bis",
+     "art-34-bis",
+     "art-152-quater-c",
+     "art-25-ter"
+    ]
+   },
+   "Q08": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.2,
+    "latency_ms": 5734.10540597979,
+    "retrieved": [
+     "art-109",
+     "art-36",
+     "art-45",
+     "art-145-d",
+     "art-38"
+    ]
+   },
+   "Q09": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5514.8229500046,
+    "retrieved": [
+     "art-9",
+     "art-177",
+     "art-163-bis",
+     "art-9-bis",
+     "art-147"
+    ]
+   },
+   "Q10": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5735.640931001399,
+    "retrieved": [
+     "art-159",
+     "art-t-183-o",
+     "art-25-bis",
+     "art-324",
+     "art-152-bis-d"
+    ]
+   },
+   "Q11": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 6131.953445030376,
+    "retrieved": [
+     "art-152-bis-h",
+     "art-44",
+     "art-55",
+     "art-56",
+     "art-145-g"
+    ]
+   },
+   "Q12": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 7082.338799024001,
+    "retrieved": [
+     "art-58",
+     "art-42",
+     "art-51",
+     "art-54-bis",
+     "art-44"
+    ]
+   },
+   "Q13": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 5765.35702496767,
+    "retrieved": [
+     "art-41",
+     "art-42",
+     "art-47",
+     "art-54-bis",
+     "art-50"
+    ]
+   },
+   "Q14": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 6340.661871014163,
+    "retrieved": [
+     "art-66",
+     "art-195",
+     "art-199-bis",
+     "art-201",
+     "art-197-bis"
+    ]
+   },
+   "Q15": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5041.350446990691,
+    "retrieved": [
+     "art-207-bis",
+     "art-150",
+     "art-66",
+     "art-32",
+     "art-152-ter-c"
+    ]
+   },
+   "Q16": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.5,
+    "latency_ms": 5350.326485000551,
+    "retrieved": [
+     "art-164",
+     "art-163",
+     "art-489",
+     "art-40-bis-d",
+     "art-t-23"
+    ]
+   },
+   "Q17": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 5225.468500051647,
+    "retrieved": [
+     "art-162",
+     "art-12",
+     "art-152-quater-o-ter",
+     "art-152-quinquies-a",
+     "art-137"
+    ]
+   },
+   "Q18": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5957.090304989833,
+    "retrieved": [
+     "art-160",
+     "art-162",
+     "art-168",
+     "art-489",
+     "art-169"
+    ]
+   },
+   "Q19": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 6447.456294961739,
+    "retrieved": [
+     "art-162",
+     "art-163-bis",
+     "art-177",
+     "art-454",
+     "art-489"
+    ]
+   },
+   "Q20": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 6329.024042992387,
+    "retrieved": [
+     "art-162",
+     "art-152-quater-o-ter",
+     "art-376",
+     "art-137",
+     "art-152-quinquies-a"
+    ]
+   },
+   "Q21": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 5821.794165996835,
+    "retrieved": [
+     "art-510",
+     "art-168",
+     "art-489",
+     "art-162",
+     "art-453"
+    ]
+   },
+   "Q22": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5749.891522980761,
+    "retrieved": [
+     "art-177",
+     "art-162",
+     "art-464",
+     "art-437",
+     "art-221"
+    ]
+   },
+   "Q23": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 5800.963571004104,
+    "retrieved": [
+     "art-196",
+     "art-202",
+     "art-201",
+     "art-197",
+     "art-197-bis"
+    ]
+   },
+   "Q24": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "latency_ms": 5572.588426002767,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-195",
+     "art-200",
+     "art-22"
+    ]
+   },
+   "Q25": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 3984.169042960275,
+    "retrieved": [
+     "art-196",
+     "art-197-bis",
+     "art-201",
+     "art-200",
+     "art-195"
+    ]
+   },
+   "Q26": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5660.859961004462,
+    "retrieved": [
+     "art-203",
+     "art-206",
+     "art-205",
+     "art-27",
+     "art-206-bis"
+    ]
+   },
+   "Q27": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5412.387304008007,
+    "retrieved": [
+     "art-206",
+     "art-203",
+     "art-27",
+     "art-196",
+     "art-201"
+    ]
+   },
+   "Q28": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5537.223885010462,
+    "retrieved": [
+     "art-152-quater-j",
+     "art-152-quater-o-ter",
+     "art-249",
+     "art-137",
+     "art-436"
+    ]
+   },
+   "Q29": {
+    "hit": 1.0,
+    "recall": 0.5,
+    "mrr": 1.0,
+    "latency_ms": 5331.566245993599,
+    "retrieved": [
+     "art-2",
+     "art-160",
+     "art-211-b-bis",
+     "art-211-e",
+     "art-211-c"
+    ]
+   },
+   "Q30": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5452.356515976135,
+    "retrieved": [
+     "art-510",
+     "art-500",
+     "art-489",
+     "art-171",
+     "art-503"
+    ]
+   },
+   "Q31": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 6539.810713031329,
+    "retrieved": [
+     "art-227",
+     "art-228",
+     "art-235",
+     "art-229",
+     "art-364"
+    ]
+   },
+   "Q32": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 0.5,
+    "latency_ms": 9245.000413968228,
+    "retrieved": [
+     "art-357",
+     "art-345",
+     "art-363",
+     "art-403",
+     "art-353"
+    ]
+   },
+   "Q33": {
+    "hit": 0.0,
+    "recall": 0.0,
+    "mrr": 0.0,
+    "latency_ms": 7068.77335999161,
+    "retrieved": [
+     "art-109",
+     "art-22",
+     "art-112",
+     "art-25-bis",
+     "art-34-bis"
+    ]
+   },
+   "Q34": {
+    "hit": 1.0,
+    "recall": 1.0,
+    "mrr": 1.0,
+    "latency_ms": 5057.9079480376095,
+    "retrieved": [
+     "art-184",
+     "art-209",
+     "art-210",
+     "art-199-bis",
+     "art-211"
+    ]
+   }
+  }
+ }
+}

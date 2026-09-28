@@ -4,7 +4,8 @@ Idempotente: vacía la tabla y la vuelve a cargar (el corpus es uno y cabe
 entero; reemplazar es más simple y seguro que calcular diferencias).
 
 Uso (con `docker compose -p lexlaboral up -d` y `uv run alembic upgrade head`):
-    uv run python scripts/ingest.py
+    uv run python scripts/ingest.py             # reemplaza todo
+    uv run python scripts/ingest.py --if-empty  # solo si la tabla está vacía (arranque en producción)
 """
 
 import asyncio
@@ -24,6 +25,12 @@ from app.rag.models import ChunkRow  # noqa: E402
 
 
 async def main() -> None:
+    if "--if-empty" in sys.argv:
+        async with get_sessionmaker()() as session:
+            existing = await session.scalar(select(func.count()).select_from(ChunkRow))
+        if existing:
+            print(f"La tabla ya tiene {existing} chunks: no se reingesta.")
+            return
     started = time.perf_counter()
     chunks = chunk_corpus(vigentes())
     total_tokens = sum(c.metadata["token_count"] for c in chunks)

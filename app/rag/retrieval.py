@@ -13,6 +13,11 @@ Por qué híbrida en un corpus legal: las preguntas mezclan lenguaje coloquial
 exactos ("fuero maternal", "artículo 161", "desahucio") —donde gana la búsqueda
 léxica—. RRF combina ambos rankings sin calibrar puntuaciones.
 
+Configuración por defecto = la que ganó en evals/results/retrieval.md:
+vectorial sin reranking (hit@5 0,94, MRR 0,74, 12 ms). Híbrida y reranking
+quedan disponibles para experimentar (y la híbrida para el agente, que busca
+con vocabulario del Código).
+
 Al final se **deduplica por artículo**: si dos partes del mismo artículo
 entran al top, cuentan como un solo resultado (la unidad de citación es el
 artículo, y el generador recibe el artículo completo — "small-to-big").
@@ -125,8 +130,8 @@ async def retrieve(
     *,
     query_text: str,
     query_vector: list[float],
-    search_mode: str = "hybrid",
-    rerank: bool = True,
+    search_mode: str = "vector",
+    rerank: bool = False,
     top_k: int | None = None,
     recall_k: int | None = None,
     reranker: CrossEncoderReranker | None = None,

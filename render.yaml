@@ -1,0 +1,27 @@
+# Blueprint de Render: servicio web (Docker) + Postgres con pgvector.
+# Render > New > Blueprint > este repo. Luego rellenar las claves en el panel.
+databases:
+  - name: lexlaboral-db
+    plan: free
+    databaseName: lexlaboral
+    user: lexlaboral
+
+services:
+  - type: web
+    name: lexlaboral
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lexlaboral-db
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DAILY_BUDGET_USD
+        value: "3"
+      - key: REQUESTS_PER_IP_PER_HOUR
+        value: "10"

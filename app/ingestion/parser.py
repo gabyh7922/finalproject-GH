@@ -114,9 +114,12 @@ def _walk(container: ET.Element, path: list[str], out: list[Article]) -> None:
                     text=clean_article_text(raw_text),
                     path=list(path),
                     derogado=node.attrib.get("derogado") != "no derogado",
+                    # Solo el bloque final "ARTICULOS TRANSITORIOS" cuenta: buscar la palabra en
+                    # cualquier parte de la ruta marcaba por error el Título VII ("...empresas de
+                    # servicios transitorios", arts. 183-A a 183-AE).
                     transitorio=node.attrib.get("transitorio") == "transitorio"
                     or kind == "Artículo Transitorio"
-                    or any("TRANSITORIO" in p.upper() for p in path),
+                    or (bool(path) and path[0].upper().startswith("ARTICULOS TRANSITORIOS")),
                     fecha_version=node.attrib.get("fechaVersion", ""),
                     id_parte=node.attrib.get("idParte", ""),
                 )

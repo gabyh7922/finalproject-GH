@@ -2,6 +2,7 @@
 
 from functools import lru_cache
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -20,6 +21,15 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql+asyncpg://lexlaboral:lexlaboral@localhost:5434/lexlaboral"
 
+    @field_validator("database_url")
+    @classmethod
+    def _async_driver(cls, value: str) -> str:
+        # Render/Neon entregan "postgres://..." o "postgresql://..."; SQLAlchemy async necesita asyncpg.
+        for prefix in ("postgres://", "postgresql://"):
+            if value.startswith(prefix):
+                return "postgresql+asyncpg://" + value[len(prefix):]
+        return value
+
     # Recuperación (valores de partida heredados del estimador; se validan con evals).
     retrieval_recall_k: int = 50
     rerank_top_n: int = 6
@@ -33,6 +43,11 @@ class Settings(BaseSettings):
     agent_search_mode: str = "hybrid"
     agent_rerank: bool = False
     agent_max_steps: int = 8
+
+    # Protección del despliegue público (cada consulta gasta crédito real de la API).
+    enable_cag: bool = False            # CAG cuesta ~US$1 por consulta sin caché: apagado en público
+    requests_per_ip_per_hour: int = 10
+    daily_budget_usd: float = 3.0
 
 
 @lru_cache

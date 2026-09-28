@@ -61,3 +61,13 @@ def test_parse_real_codigo():
     feriado = next(a for a in articles if a.article_id == "art-67")
     assert "quince días hábiles" in feriado.text
     assert feriado.path[-1] == "Capítulo VII DEL FERIADO ANUAL Y DE LOS PERMISOS"
+
+
+@pytest.mark.skipif(not RAW.exists(), reason="falta data/raw/codigo_trabajo.xml")
+def test_subcontracting_articles_are_not_marked_transitory():
+    # Regresión: el Título VII menciona "empresas de servicios transitorios" y el
+    # parser marcaba sus artículos (183-A a 183-AE) como transitorios.
+    _, articles = parse_codigo(RAW)
+    ids = {a.article_id for a in articles}
+    assert "art-183-ae" in ids and "art-t-183-ae" not in ids
+    assert "art-t-1" in ids  # los transitorios reales siguen marcados

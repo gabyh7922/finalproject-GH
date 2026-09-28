@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LexLaboral</title>
+<meta name="description" content="Pregunta sobre el Código del Trabajo de Chile y recibe respuestas con cada artículo citado y verificado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ec; --surface: #fffdf8; --ink: #1d1b16; --muted: #6b665a; --line: #e2dccd;
+    --accent: #7a3b16; --accent-soft: #f3e4d7;
+    --ok: #1f6b3a; --ok-soft: #e1f1e5; --warn: #8a5a00; --warn-soft: #fbefd2; --bad: #a12a22; --bad-soft: #f8dfdc;
+    --mark: #fbe27a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15140f; --surface: #1e1c16; --ink: #ede8dc; --muted: #a39d8e; --line: #353126;
+      --accent: #e3a47c; --accent-soft: #3a2a1f;
+      --ok: #7fd49a; --ok-soft: #1c3324; --warn: #f0c060; --warn-soft: #3a2f14; --bad: #f19a92; --bad-soft: #3d1f1c;
+      --mark: #6b5a12;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15140f; --surface: #1e1c16; --ink: #ede8dc; --muted: #a39d8e; --line: #353126;
+    --accent: #e3a47c; --accent-soft: #3a2a1f;
+    --ok: #7fd49a; --ok-soft: #1c3324; --warn: #f0c060; --warn-soft: #3a2f14; --bad: #f19a92; --bad-soft: #3d1f1c;
+    --mark: #6b5a12;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-family: Fraunces, Georgia, serif; font-weight: 650; font-size: clamp(2rem, 6vw, 2.8rem); margin: 0; letter-spacing: -0.02em; }
+  header h1 span { color: var(--accent); }
+  header p { color: var(--muted); margin: 6px 0 0; max-width: 60ch; }
+  .meta { font-size: .8rem; color: var(--muted); margin-top: 10px; }
+  form { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  textarea { width: 100%; min-height: 96px; resize: vertical; border: 0; background: transparent; color: var(--ink); font: inherit; outline: none; }
+  .row { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 12px; margin-top: 8px; }
+  .modes { display: flex; gap: 4px; background: var(--bg); border-radius: 999px; padding: 3px; }
+  .modes label { font-size: .85rem; padding: 6px 12px; border-radius: 999px; cursor: pointer; color: var(--muted); }
+  .modes input { display: none; }
+  .modes input:checked + span { color: var(--ink); }
+  .modes label:has(input:checked) { background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.08); color: var(--ink); }
+  button.primary { background: var(--accent); color: var(--surface); border: 0; border-radius: 999px; padding: 10px 20px; font: 600 .95rem Inter, sans-serif; cursor: pointer; }
+  button.primary:disabled { opacity: .5; cursor: wait; }
+  .examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .examples button { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: 5px 12px; font: .82rem Inter, sans-serif; cursor: pointer; }
+  .examples button:hover { color: var(--ink); border-color: var(--muted); }
+  #status { margin-top: 24px; color: var(--muted); font-size: .92rem; min-height: 1.5em; }
+  .answer { margin-top: 12px; }
+  .short { font-family: Fraunces, Georgia, serif; font-size: 1.3rem; line-height: 1.45; margin: 0 0 20px; }
+  .scope { background: var(--warn-soft); color: var(--warn); border-radius: 10px; padding: 10px 14px; font-size: .9rem; margin-bottom: 16px; }
+  ol.points { padding-left: 1.3em; margin: 0; }
+  ol.points li { margin-bottom: 14px; }
+  ol.points li.ungrounded { color: var(--muted); }
+  .tag { display: inline-flex; align-items: center; gap: 4px; font-size: .78rem; font-weight: 600; border-radius: 6px; padding: 1px 8px; margin: 2px 4px 0 0; cursor: pointer; border: 0; font-family: Inter, sans-serif; }
+  .tag.verified { background: var(--ok-soft); color: var(--ok); }
+  .tag.misquoted { background: var(--warn-soft); color: var(--warn); }
+  .tag.dangling { background: var(--bad-soft); color: var(--bad); }
+  .tag.plain { background: var(--bg); color: var(--muted); cursor: default; font-weight: 500; }
+  .article { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 12px 14px; margin: 8px 0 4px; font-size: .9rem; white-space: pre-wrap; }
+  .article .crumb { display: block; color: var(--muted); font-size: .75rem; margin-bottom: 6px; white-space: normal; }
+  mark { background: var(--mark); color: inherit; border-radius: 2px; }
+  .panel { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 16px; font-size: .88rem; color: var(--muted); }
+  .panel h3 { font: 600 .8rem Inter, sans-serif; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; color: var(--muted); }
+  .trace { list-style: none; padding: 0; margin: 0 0 16px; }
+  .trace li { padding: 4px 0; }
+  .trace code { font-size: .82rem; color: var(--ink); }
+  .stats { display: flex; gap: 18px; flex-wrap: wrap; }
+  .stats b { color: var(--ink); font-weight: 600; }
+  footer { margin-top: 48px; font-size: .8rem; color: var(--muted); }
+  footer a { color: var(--accent); }
+  .error { color: var(--bad); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Lex<span>Laboral</span></h1>
+    <p>Pregunta sobre tus derechos laborales en Chile. Cada respuesta cita el artículo exacto del Código del Trabajo, y cada cita se verifica automáticamente contra el texto oficial.</p>
+    <div class="meta" id="meta">Cargando…</div>
+  </header>
+
+  <form id="form">
+    <textarea id="q" placeholder="Ej: Me despidieron por necesidades de la empresa después de 6 años, ¿cuánto me tienen que pagar?" required minlength="3" maxlength="2000"></textarea>
+    <div class="row">
+      <div class="modes" role="radiogroup" aria-label="Modo">
+        <label title="Busca, lee artículos y usa calculadoras. Más completo."><input type="radio" name="mode" value="agent" checked><span>Agente</span></label>
+        <label title="Una búsqueda y una respuesta. Más rápido."><input type="radio" name="mode" value="rag"><span>RAG rápido</span></label>
+      </div>
+      <button class="primary" id="go" type="submit">Preguntar</button>
+    </div>
+  </form>
+  <div class="examples" id="examples"></div>
+
+  <div id="status" aria-live="polite"></div>
+  <section id="out"></section>
+
+  <footer>
+    Proyecto académico. Las respuestas son orientativas y no reemplazan la asesoría de un abogado ni de la
+    <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a>.
+    Fuente: <a href="https://www.bcn.cl/leychile/navegar?idNorma=207436" target="_blank" rel="noopener">Código del Trabajo, BCN</a>.
+  </footer>
+</div>
+
+<script>
+const EXAMPLES = [
+  "¿Cuántos días de vacaciones me corresponden?",
+  "Estoy embarazada, ¿me pueden despedir?",
+  "Trabajé del 1-3-2019 al 15-9-2025 ganando $1.200.000 y me despidieron sin aviso por necesidades de la empresa. ¿Cuánto me deben pagar?",
+  "Hago teletrabajo, ¿mi jefe me puede escribir a cualquier hora?",
+  "¿Qué porcentaje de mi sueldo se va a la AFP?",
+];
+const STATUS_LABEL = { verified: "✓", misquoted: "⚠ cita no textual", dangling: "✗ artículo no consultado" };
+const TOOL_LABEL = { buscar_articulos: "Buscó", leer_articulo: "Leyó", calcular_indemnizacion: "Calculó indemnización", calcular_feriado: "Calculó feriado" };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const norm = (s) => s.toLowerCase().replace(/\s+/g, " ").replace(/["“”«»]/g, "").trim();
+
+EXAMPLES.forEach((text) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = text.length > 60 ? text.slice(0, 58) + "…" : text;
+  b.onclick = () => { $("q").value = text; $("q").focus(); };
+  $("examples").appendChild(b);
+});
+
+fetch("/health").then((r) => r.json()).then((h) => {
+  $("meta").textContent = `Código del Trabajo vigente al ${h.corpus_version} · ${h.articles} artículos · modelo ${h.model}`;
+}).catch(() => { $("meta").textContent = ""; });
+
+function highlight(text, quote) {
+  const safe = esc(text);
+  const parts = quote.split(/\.\.\.|…/).map((p) => p.trim().replace(/^[."'“”]+|[."'“”]+$/g, "")).filter((p) => p.length > 8);
+  let out = safe;
+  for (const part of parts) {
+    const words = esc(part).split(/\s+/).map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const re = new RegExp(words.join("\\s+"), "i");
+    out = out.replace(re, (m) => `<mark>${m}</mark>`);
+  }
+  return out;
+}
+
+function render(data) {
+  const a = data.answer;
+  const byPoint = {};
+  data.citations.forEach((c) => (byPoint[c.point] ??= []).push(c));
+  let html = `<div class="answer">`;
+  if (a.out_of_scope) html += `<div class="scope">Esta consulta no la resuelve el Código del Trabajo por sí solo.</div>`;
+  html += `<p class="short">${esc(a.short_answer)}</p><ol class="points">`;
+  a.points.forEach((p, i) => {
+    const cites = byPoint[i] || [];
+    html += `<li class="${p.grounded ? "" : "ungrounded"}">${esc(p.statement)}<br>`;
+    if (!p.grounded) html += `<span class="tag plain">sin respaldo en el Código</span>`;
+    cites.forEach((c, j) => {
+      const art = data.articles[c.article_id];
+      const label = art ? art.label : c.article_id;
+      html += `<button type="button" class="tag ${c.status}" data-p="${i}" data-j="${j}">${esc(label)} ${STATUS_LABEL[c.status]}</button>`;
+    });
+    html += `<div id="art-${i}"></div></li>`;
+  });
+  html += `</ol></div><div class="panel">`;
+  if (data.trace.length) {
+    html += `<h3>Lo que hizo el agente</h3><ul class="trace">` + data.trace.map((t) => {
+      const arg = t.input.consulta || t.input.articulo || Object.entries(t.input).map(([k, v]) => `${k}=${v}`).join(", ");
+      return `<li>${TOOL_LABEL[t.name] || t.name}: <code>${esc(arg)}</code>${t.is_error ? " (error)" : ""}</li>`;
+    }).join("") + `</ul>`;
+  }
+  const verified = data.citations.filter((c) => c.status === "verified").length;
+  html += `<h3>Verificación</h3><div class="stats">
+    <span><b>${verified}/${data.citations.length}</b> citas verificadas</span>
+    <span><b>${data.consulted_article_ids.length}</b> artículos consultados</span>
+    <span><b>${(data.latency_ms / 1000).toFixed(1)} s</b></span>
+    <span><b>US$${data.cost_usd.toFixed(3)}</b></span></div></div>`;
+  $("out").innerHTML = html;
+  $("out").querySelectorAll("button.tag").forEach((btn) => {
+    btn.onclick = () => {
+      const c = byPoint[btn.dataset.p][btn.dataset.j];
+      const box = $(`art-${btn.dataset.p}`);
+      const art = data.articles[c.article_id];
+      if (box.dataset.open === `${btn.dataset.j}`) { box.innerHTML = ""; box.dataset.open = ""; return; }
+      box.dataset.open = `${btn.dataset.j}`;
+      box.innerHTML = art
+        ? `<div class="article"><span class="crumb">${esc(art.breadcrumb)}</span>${highlight(art.text, c.quote)}</div>`
+        : `<div class="article">El artículo <b>${esc(c.article_id)}</b> no existe o no fue consultado.</div>`;
+    };
+  });
+}
+
+$("form").onsubmit = async (e) => {
+  e.preventDefault();
+  const question = $("q").value.trim();
+  const mode = document.querySelector("input[name=mode]:checked").value;
+  $("go").disabled = true; $("out").innerHTML = "";
+  $("status").textContent = mode === "agent" ? "El agente está buscando en el Código… (20–40 s)" : "Buscando y redactando… (10–20 s)";
+  try {
+    const r = await fetch("/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, mode }) });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.detail || "Error inesperado");
+    $("status").textContent = "";
+    render(data);
+  } catch (err) {
+    $("status").innerHTML = `<span class="error">${esc(err.message)}</span>`;
+  } finally {
+    $("go").disabled = false;
+  }
+};
+</script>
+</body>
+</html>

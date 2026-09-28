@@ -56,7 +56,7 @@ async def answer_question(
     question: str,
     *,
     search_mode: str = "vector",
-    rerank: bool = True,
+    rerank: bool = False,  # el reranker no mejoró la recuperación (evals/results/retrieval.md)
     top_k: int | None = None,
 ) -> RAGResult:
     request_id = str(uuid.uuid4())
