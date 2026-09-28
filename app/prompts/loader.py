@@ -9,7 +9,7 @@ from pathlib import Path
 
 PROMPTS_DIR = Path(__file__).resolve().parent
 
-CURRENT = {"legal_answer": "v1"}
+CURRENT = {"legal_answer": "v1", "agent": "v1"}
 
 
 @lru_cache

@@ -29,6 +29,11 @@ class Settings(BaseSettings):
     lexical_max_df: float = 0.15
     lexical_weight: float = 1.0
 
+    # Agente: búsqueda que usan sus herramientas y tope de iteraciones del bucle.
+    agent_search_mode: str = "hybrid"
+    agent_rerank: bool = False
+    agent_max_steps: int = 8
+
 
 @lru_cache
 def get_settings() -> Settings:
