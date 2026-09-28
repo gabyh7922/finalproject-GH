@@ -204,7 +204,26 @@ Resultados end-to-end ([answers_*.jsonl](evals/results/)):
 **RAGAS** ([evals/results/ragas.md](evals/results/ragas.md)) — juez de otro proveedor (OpenAI)
 que el generador (Claude), para no premiar el propio estilo:
 
-{{RAGAS_TABLE}}
+| Sistema | faithfulness | answer_relevancy | context_precision | context_recall |
+|---|---|---|---|---|
+| RAG | 0,88 | 0,46 | **0,95** | 0,94 |
+| Agente | **0,91** | **0,54** | 0,92 | **0,96** |
+| _Referencia: estimador del curso (sesión 11)_ | _0,59_ | _0,42_ | _0,99_ | _0,73_ |
+
+Lectura:
+- **faithfulness 0,88-0,91**: el juez considera respaldada casi toda afirmación. Lo que no llega
+  a 1 son sobre todo los puntos marcados a propósito como `grounded=false` (orientación práctica
+  como "acude a la Inspección del Trabajo"), que no están en el contexto por diseño. La
+  verificación determinista de citas (99,7-100%) es la métrica más estricta del sistema.
+- **context_recall 0,94-0,96**: el contexto trae lo que pide la respuesta de referencia; el
+  agente gana por reformular y seguir remisiones.
+- **answer_relevancy baja (0,46-0,54)**: RAGAS la mide generando preguntas a partir de la
+  respuesta y comparando embeddings con la pregunta original. Las respuestas de LexLaboral son
+  largas a propósito (salvedades, plazos, a quién acudir), lo que baja esa similitud aunque la
+  pregunta quede respondida. Es una limitación conocida de la métrica con respuestas largas, y
+  además en español; por eso se complementa con el recall de artículos, que es determinista.
+- Una de las 136 llamadas del juez para el agente chocó con el rate limit de OpenAI y su métrica
+  quedó vacía; los promedios la excluyen.
 
 ### Elección de modelo
 `claude-opus-5` para generación y agente (configurable con `LLM_MODEL`), con salida
