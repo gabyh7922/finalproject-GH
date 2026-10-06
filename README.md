@@ -2,7 +2,9 @@
 
 > Proyecto Final · AI Engineering · Autoría: **Gaby (GH)** · Rama de entrega: `finalproject-GH`
 >
-> 🌐 **Demo pública:** _pendiente de despliegue (ver [Despliegue](#despliegue))_
+> 🌐 **Demo pública:** **https://lexlaboral.onrender.com** · API interactiva en [/docs](https://lexlaboral.onrender.com/docs)
+>
+> ⏳ Plan gratuito de Render: si nadie la usó en los últimos 15 minutos, la primera visita tarda ~1 minuto en despertar.
 
 ## El problema
 
@@ -259,7 +261,7 @@ pregunta y ~US$0,2 las siguientes mientras la caché esté caliente).
 
 ## Despliegue
 
-Render (blueprint en [`render.yaml`](render.yaml)): servicio web Docker + Postgres con pgvector.
+Publicado en **https://lexlaboral.onrender.com** con Render (blueprint en [`render.yaml`](render.yaml)): servicio web Docker + Postgres con pgvector.
 Al arrancar, [`scripts/start.sh`](scripts/start.sh) aplica migraciones, ingesta el corpus solo si
 la tabla está vacía, y levanta la API.
 
