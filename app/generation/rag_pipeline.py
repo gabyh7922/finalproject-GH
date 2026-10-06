@@ -13,6 +13,7 @@ texto completo.
 
 from __future__ import annotations
 
+import asyncio
 import uuid
 from dataclasses import dataclass
 from xml.sax.saxutils import escape
@@ -61,13 +62,16 @@ async def answer_question(
 ) -> RAGResult:
     request_id = str(uuid.uuid4())
     retrieved, retrieval_ms = await retrieve(
-        session, query_text=question, query_vector=embed_one(question),
+        session, query_text=question, query_vector=await asyncio.to_thread(embed_one, question),
         search_mode=search_mode, rerank=rerank, top_k=top_k,
     )
     article_ids = [c.article_id for c in retrieved]
     context = {aid: articles_by_id()[aid].text for aid in article_ids}
 
-    answer, usage = parse_structured(
+    # Las llamadas a OpenAI/Claude son bloqueantes: se ejecutan en un hilo para no
+    # congelar el servidor (si no, el health check de Render falla y reinicia la instancia).
+    answer, usage = await asyncio.to_thread(
+        parse_structured,
         system=load_prompt("legal_answer"),
         user=f"{render_context(article_ids)}\n\nPregunta: {question}",
         output_format=LegalAnswer,

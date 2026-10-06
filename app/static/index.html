@@ -197,7 +197,15 @@ $("form").onsubmit = async (e) => {
   $("status").textContent = mode === "agent" ? "El agente está buscando en el Código… (20–40 s)" : "Buscando y redactando… (10–20 s)";
   try {
     const r = await fetch("/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, mode }) });
-    const data = await r.json();
+    // Si el servidor se reinicia o el proxy corta la conexión, la respuesta no es JSON:
+    // se muestra un mensaje entendible en vez del error técnico del navegador.
+    const raw = await r.text();
+    let data;
+    try { data = JSON.parse(raw); } catch {
+      throw new Error(r.status >= 500 || !raw
+        ? "El servidor no alcanzó a responder (puede estar despertando tras un rato sin uso). Espera unos segundos y vuelve a preguntar."
+        : "Respuesta inesperada del servidor. Intenta de nuevo.");
+    }
     if (!r.ok) throw new Error(data.detail || "Error inesperado");
     $("status").textContent = "";
     render(data);

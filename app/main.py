@@ -8,6 +8,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from pathlib import Path
 from typing import Literal
@@ -113,7 +114,7 @@ def health() -> dict:
 @app.post("/search", response_model=list[SearchHit])
 async def search(req: SearchRequest, session: AsyncSession = Depends(get_db_session)):
     chunks, _ = await retrieve(
-        session, query_text=req.query, query_vector=embed_one(req.query),
+        session, query_text=req.query, query_vector=await asyncio.to_thread(embed_one, req.query),
         search_mode=req.search_mode, rerank=req.rerank, top_k=req.k,
     )
     arts = articles_by_id()
@@ -139,7 +140,7 @@ async def ask(req: AskRequest, request: Request, session: AsyncSession = Depends
         if req.mode == "cag":
             from app.cag.service import answer_question as cag_answer
 
-            result = cag_answer(req.question)
+            result = await asyncio.to_thread(cag_answer, req.question)
             consulted: list[str] = []
             latency = result.usage.latency_ms
         elif req.mode == "rag":

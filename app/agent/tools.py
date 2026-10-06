@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import re
 from datetime import date
@@ -136,7 +137,7 @@ class ToolExecutor:
     async def _buscar(self, consulta: str) -> str:
         settings = get_settings()
         chunks, _ = await retrieve(
-            self.session, query_text=consulta, query_vector=embed_one(consulta),
+            self.session, query_text=consulta, query_vector=await asyncio.to_thread(embed_one, consulta),
             search_mode=settings.agent_search_mode, rerank=settings.agent_rerank, top_k=5,
         )
         arts = articles_by_id()

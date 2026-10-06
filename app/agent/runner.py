@@ -15,6 +15,7 @@ La respuesta final usa el mismo esquema `LegalAnswer` que CAG y RAG.
 
 from __future__ import annotations
 
+import asyncio
 import time
 import uuid
 from datetime import date
@@ -73,7 +74,10 @@ async def run_agent(session: AsyncSession, question: str) -> AgentResult:
     for step in range(1, settings.agent_max_steps + 1):
         last_step = step == settings.agent_max_steps
         started = time.perf_counter()
-        response = client.beta.messages.parse(
+        # Llamada bloqueante (20-40 s en total): en un hilo, para que el servidor siga
+        # respondiendo a otras peticiones y al health check de Render mientras espera.
+        response = await asyncio.to_thread(
+            client.beta.messages.parse,
             model=settings.llm_model,
             max_tokens=16000,
             betas=[FALLBACK_BETA],
