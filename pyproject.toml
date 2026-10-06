@@ -17,7 +17,6 @@ dependencies = [
     "asyncpg>=0.29",
     "pgvector>=0.3",
     "alembic>=1.13",
-    "streamlit>=1.38.0",
 ]
 
 [dependency-groups]
